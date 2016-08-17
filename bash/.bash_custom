@@ -9,6 +9,7 @@
 # Git
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
+. /usr/share/git-core/contrib/completion/git-prompt.sh
 
 # Color the prompt differently for a mac, linux host, vm, or docker
 # container.

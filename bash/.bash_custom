@@ -6,6 +6,10 @@
 #   if [ -f ~/.bash_custom ]; then . ~/.bash_custom; fi
 #
 
+# Aliases
+if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
+
+
 # Git
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true

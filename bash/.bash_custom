@@ -56,6 +56,9 @@ export PATH=~/.cask/bin:$PATH
 # Ensure python binaries are in the path
 export PATH=~/.local/bin:$PATH
 
+# Ensure non-packaged golang is in the path
+export PATH=$PATH:/usr/local/go/bin
+
 export GOPATH=~/go
 
 # Ensure go binaries are in the path

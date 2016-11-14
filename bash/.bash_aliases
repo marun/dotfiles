@@ -13,3 +13,5 @@ fi
 alias g='git'
 
 alias cdos='pushd ~/src/openshift/src/github.com/openshift/origin'
+
+alias kc='kubectl'

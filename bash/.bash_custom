@@ -68,6 +68,21 @@ if [[ -f "~/.bash_aliases" ]]; then
   . "~/.bash_aliases"
 fi
 
+function copr() {
+  local pr=${1:-}
+  local branch=${2:-}
+  local remote=${3:-upstream}
+
+  if [[ -z "${pr}" ]]; then
+    >&2 echo "Please provide a PR id."
+    return
+  fi
+  if [[ -z "${branch}" ]]; then
+    branch="pr/${pr}"
+  fi
+  git fetch "${remote}" "pull/${pr}/head:${branch}" && git co "${branch}"
+}
+
 export XAUTHORITY=~/.Xauthority
 
 # Ensure that ssh agent forwarding works with existing screen sessions.

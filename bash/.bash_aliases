@@ -15,3 +15,5 @@ alias g='git'
 alias cdos='pushd ~/src/os/src/github.com/openshift/origin'
 
 alias kc='kubectl'
+
+alias dk='docker'

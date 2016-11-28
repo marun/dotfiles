@@ -31,6 +31,10 @@ then
   export DOCKER_TLS_VERIFY=1
 
   PS1_PREFIX=
+
+  # Set the TZ for docker containers accessed via ssh
+  export TZ="$(readlink /etc/localtime | sed -e 's,.*/zoneinfo/,,')"
+
 # Linux
 else
   USER_ID="$(whoami)"
@@ -41,6 +45,8 @@ else
   else
     PS1_COLOR='32' # Green
     export VAGRANT_DEFAULT_PROVIDER=libvirt
+    # Set the TZ for docker containers accessed via ssh
+    export TZ="$(readlink /etc/localtime | sed -e 's,.*/zoneinfo/,,')"
   fi
   PS1_PREFIX='${debian_chroot:+($debian_chroot)}'
 fi

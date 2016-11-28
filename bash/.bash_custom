@@ -39,7 +39,7 @@ else
     PS1_COLOR='37' # White
   # Host
   else
-    ps1_color='32' # Green
+    PS1_COLOR='32' # Green
     export VAGRANT_DEFAULT_PROVIDER=libvirt
   fi
   PS1_PREFIX='${debian_chroot:+($debian_chroot)}'

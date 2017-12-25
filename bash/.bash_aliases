@@ -12,11 +12,15 @@ fi
 
 alias g='git'
 
-alias cdos='export GOPATH=~/src/os;pushd ~/src/os/src/github.com/openshift/origin > /dev/null'
+alias cdos='export GOPATH=/opt/src/os;pushd /opt/src/os/src/github.com/openshift/origin > /dev/null'
 
-alias cdose='export GOPATH=~/src/ose;pushd ~/src/ose/src/github.com/openshift/ose > /dev/null'
+alias cdose='export GOPATH=/opt/src/ose;pushd /opt/src/ose/src/github.com/openshift/ose > /dev/null'
 
-alias cdk8s='export GOPATH=~/pushd ~/src/k8s/src/k8s.io/kubernetes > /dev/null'
+alias cdkk='export GOPATH=/opt/src/kk;pushd /opt/src/kk/src/k8s.io/kubernetes > /dev/null'
+
+alias cdkf='export GOPATH=/opt/src/kf;pushd /opt/src/kf/src/k8s.io/federation > /dev/null'
+
+alias cdkt='export GOPATH=/opt/src/kt;pushd /opt/src/kt/src/k8s.io/test-infra > /dev/null'
 
 alias kc='kubectl'
 

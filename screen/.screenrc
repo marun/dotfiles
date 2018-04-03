@@ -7,8 +7,14 @@ defscrollback 10240
 vbell off
 startup_message off
 
-# Remap to C-b
-escape ^Bb
+# reset escape key ctrl+^ (never used in emacs keybindings)
+escape ^^^
+
+# auxiliary register
+register S ^^
+
+# Alt + space produces ^A and acts as an escape key
+bindkey "^[ " process S
 
 ## do not trash BackSpace, usually DEL
 bindkey -k kb

@@ -24,7 +24,7 @@ alias cdkt='export GOPATH=/opt/src/kt;pushd /opt/src/kt/src/k8s.io/test-infra > 
 
 alias cdfn='export GOPATH=/opt/src/fn;export PATH=/opt/src/fn/src/github.com/kubernetes-sigs/federation-v2/bin:$PATH;pushd /opt/src/fn/src/github.com/kubernetes-sigs/federation-v2 > /dev/null'
 
-alias cdtf='export GOPATH=/opt/src/tf;pushd /opt/src/tf/src/github.com/kubernetes-sig-testing/frameworks > /dev/null'
+alias cdtf='export GOPATH=/opt/src/tf;pushd /opt/src/tf/src/github.com/kubernetes-sigs/testing_frameworks > /dev/null'
 
 alias cdcr='export GOPATH=/opt/src/cr;pushd /opt/src/cr/src/k8s.io/cluster-registry > /dev/null'
 

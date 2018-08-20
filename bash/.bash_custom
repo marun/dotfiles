@@ -72,6 +72,13 @@ export GOPATH=~/go
 # Ensure go binaries are in the path
 export PATH=$GOPATH/bin:$PATH
 
+# Use local tmp when running in a container to allow test execution.
+if [ -f /.dockerenv ]; then
+  export TMPDIR=~/tmp
+  if [ ! -d "${TMPDIR}" ]; then
+    mkdir "${TMPDIR}"
+  fi
+fi
 
 if [[ -f "~/.bash_aliases" ]]; then
   . "~/.bash_aliases"

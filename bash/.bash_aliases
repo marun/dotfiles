@@ -28,6 +28,10 @@ alias cdtf='export GOPATH=/opt/src/tf;pushd /opt/src/tf/src/github.com/kubernete
 
 alias cdcr='export GOPATH=/opt/src/cr;pushd /opt/src/cr/src/k8s.io/cluster-registry > /dev/null'
 
+alias cdop='export GOPATH=/opt/src/op;export PATH=/opt/src/op/bin:$PATH;pushd /opt/src/op/src/github.com/operator-framework/operator-sdk > /dev/null'
+
+alias cdol='export GOPATH=/opt/src/of;pushd /opt/src/of/src/github.com/operator-framework/operator-lifecycle-manager > /dev/null'
+
 alias kc='kubectl'
 
 alias dk='docker'

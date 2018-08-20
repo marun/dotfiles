@@ -72,8 +72,6 @@ export GOPATH=~/go
 # Ensure go binaries are in the path
 export PATH=$GOPATH/bin:$PATH
 
-# Add apiserver-builder to path
-export PATH=$PATH:/usr/local/apiserver-builder/bin
 
 if [[ -f "~/.bash_aliases" ]]; then
   . "~/.bash_aliases"

@@ -24,14 +24,6 @@ then
   . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 
   PS1_COLOR='36' # Cyan
-  export PATH=${PATH}:/Applications/VMware\ Fusion.app/Contents/Library
-  export VAGRANT_DEFAULT_PROVIDER='vmware_fusion'
-  ulimit -n 1024
-
-  export DOCKER_HOST=tcp://boot2docker:2376
-  export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-  export DOCKER_TLS_VERIFY=1
-
   PS1_PREFIX=
 
   # Set the TZ for docker containers accessed via ssh
@@ -83,11 +75,6 @@ if [ -f /.dockerenv ]; then
     mkdir "${TMPDIR}"
   fi
 fi
-
-# kubebuilder env vars
-export TEST_ASSET_PATH="/opt/src/fn/src/github.com/kubernetes-sigs/federation-v2/bin"
-export TEST_ASSET_ETCD="${TEST_ASSET_PATH}/etcd"
-export TEST_ASSET_KUBE_APISERVER="${TEST_ASSET_PATH}/kube-apiserver"
 
 if [[ -f "~/.bash_aliases" ]]; then
   . "~/.bash_aliases"

@@ -13,7 +13,6 @@ if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 # Git
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-. /usr/share/git-core/contrib/completion/git-prompt.sh
 
 # Color the prompt differently for a mac, linux host, vm, or docker
 # container.
@@ -21,6 +20,9 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 # Mac
 if which sw_vers &> /dev/null;
 then
+  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+
   PS1_COLOR='36' # Cyan
   export PATH=${PATH}:/Applications/VMware\ Fusion.app/Contents/Library
   export VAGRANT_DEFAULT_PROVIDER='vmware_fusion'
@@ -37,6 +39,8 @@ then
 
 # Linux
 else
+  . /usr/share/git-core/contrib/completion/git-prompt.sh
+
   USER_ID="$(whoami)"
   # VM / Container
   if [[ "${USER_ID}" == "vagrant" || "${USER_ID}" == "dev" ]]; then

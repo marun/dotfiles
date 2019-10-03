@@ -28,6 +28,10 @@ alias cdop='export GOPATH=/opt/src/op;export PATH=/opt/src/op/bin:$PATH;pushd /o
 
 alias cdol='export GOPATH=/opt/src/of;pushd /opt/src/of/src/github.com/operator-framework/operator-lifecycle-manager > /dev/null'
 
+alias cdct='export GOPATH=/opt/src/ct;pushd /opt/src/ct/src/sigs.k8s.io/controller-tools > /dev/null'
+
+alias cdoso='export GOPATH=/opt/src/oso;export PATH=/opt/src/oso/bin:$PATH;pushd /opt/src/oso/src/github.com/openshift > /dev/null'
+
 alias kc='kubectl'
 
 alias dk='docker'

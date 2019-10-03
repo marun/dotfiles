@@ -35,3 +35,5 @@ alias cdoso='export GOPATH=/opt/src/oso;export PATH=/opt/src/oso/bin:$PATH;pushd
 alias kc='kubectl'
 
 alias dk='docker'
+
+alias kf='kubefedctl'

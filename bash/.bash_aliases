@@ -21,3 +21,5 @@ alias kc='kubectl'
 alias cdkf='export GOPATH=~/src/kf;export PATH=~/src/kf/bin:~/src/kf/src/sigs.k8s.io/kubefed/bin:$PATH;pushd ~/src/kf/src/sigs.k8s.io/kubefed > /dev/null'
 
 alias kf='kubefedctl'
+
+alias docker=podman

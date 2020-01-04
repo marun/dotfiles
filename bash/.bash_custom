@@ -32,6 +32,9 @@ then
   # Ensure local bin path (not set automatically)
   export PATH=$HOME/bin:$PATH
 
+  # Ensure python binaries are in the path
+  export PATH=/Users/maru/Library/Python/3.7/bin:$PATH
+
 # Linux
 else
   . /usr/share/git-core/contrib/completion/git-prompt.sh
@@ -48,6 +51,10 @@ else
     export TZ="$(readlink /etc/localtime | sed -e 's,.*/zoneinfo/,,')"
   fi
   PS1_PREFIX='${debian_chroot:+($debian_chroot)}'
+
+  # Ensure python binaries are in the path
+  export PATH=~/.local/bin:$PATH
+
 fi
 
 # Compose prompt
@@ -57,9 +64,6 @@ PS1=${PS1_PREFIX}'\[\033[01;'${PS1_COLOR}'m\]'${PS1_BASE}${PS1_GIT}
 
 # Ensure cask binaries are in the path
 export PATH=~/.cask/bin:$PATH
-
-# Ensure python binaries are in the path
-export PATH=~/.local/bin:$PATH
 
 # Ensure non-packaged golang trumps go installed from packages
 export PATH=/usr/local/go/bin:$PATH

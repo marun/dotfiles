@@ -29,6 +29,9 @@ then
   # Set the TZ for docker containers accessed via ssh
   export TZ="$(readlink /etc/localtime | sed -e 's,.*/zoneinfo/,,')"
 
+  # Ensure local bin path (not set automatically)
+  export PATH=$HOME/bin:$PATH
+
 # Linux
 else
   . /usr/share/git-core/contrib/completion/git-prompt.sh

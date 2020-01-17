@@ -72,6 +72,8 @@ eval $(~/bin/gimme 1.13.5 | grep -v 'go version')
 
 export GOPATH=~/go
 
+export KUBECONFIG=~/.kube/default-kubeconfig
+
 # Ensure go binaries are in the path
 export PATH=$GOPATH/bin:$PATH
 

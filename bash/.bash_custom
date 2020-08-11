@@ -68,7 +68,7 @@ export PATH=~/.cask/bin:$PATH
 # Ensure non-packaged golang trumps go installed from packages
 export PATH=/usr/local/go/bin:$PATH
 
-eval $(~/bin/gimme 1.13.10 | grep -v 'go version')
+eval $(~/bin/gimme 1.14.7 | grep -v 'go version')
 
 export GOPATH=~/go
 

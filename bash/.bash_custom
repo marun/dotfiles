@@ -113,11 +113,7 @@ export XAUTHORITY=~/.Xauthority
 
 export AWS_PROFILE=openshift-dev
 
-# Ensure that ssh agent forwarding works with existing screen sessions.
-if [[ -S "${SSH_AUTH_SOCK}" && ! -h "${SSH_AUTH_SOCK}" ]]; then
-  ln -sf "${SSH_AUTH_SOCK}" ~/.ssh/ssh_auth_sock;
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
+eval `keychain --eval --agents ssh id_rsa`
 
 if [[ $TERMCAP =~ screen ]]; then
   # Emacs doesn't play nice with TERM=screen

@@ -122,3 +122,5 @@ elif which screen &> /dev/null && screen -ls maru-dev | grep Detached > /dev/nul
   echo 'Attaching to screen session...'
   attach
 fi
+
+export LOKI_ADDR=http://localhost:3100

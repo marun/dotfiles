@@ -1,6 +1,7 @@
-hardstatus on
-hardstatus alwayslastline
-hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G}%H %{..Y}%m/%d %c"
+# Using emacs as window manager obviates the utility of
+# hardstatus. Screen is just used to simplify switching between devices.
+hardstatus off
+hardstatus ignore
 
 defscrollback 10240
 

@@ -118,9 +118,6 @@ eval `keychain --eval --agents ssh id_rsa`
 if [[ $TERMCAP =~ screen ]]; then
   # Emacs doesn't play nice with TERM=screen
   export TERM=xterm-256color
-elif which screen &> /dev/null && screen -ls maru-dev | grep Detached > /dev/null; then
-  echo 'Attaching to screen session...'
-  attach
 fi
 
 export LOKI_ADDR=http://localhost:3100

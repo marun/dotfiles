@@ -97,7 +97,7 @@ fi
 function copr() {
   local pr=${1:-}
   local branch=${2:-}
-  local remote=${3:-upstream}
+  local remote=${3:-origin}
 
   if [[ -z "${pr}" ]]; then
     >&2 echo "Please provide a PR id."

@@ -60,6 +60,10 @@ else
   # Ensure python binaries are in the path
   export PATH=~/.local/bin:$PATH
 
+  if which keychain &> /dev/null;
+  then
+    eval `keychain --eval --agents ssh id_rsa`
+  fi
 fi
 
 # Compose prompt
@@ -112,8 +116,6 @@ function copr() {
 export XAUTHORITY=~/.Xauthority
 
 export AWS_PROFILE=openshift-dev
-
-eval `keychain --eval --agents ssh id_rsa`
 
 if [[ $TERMCAP =~ screen ]]; then
   # Emacs doesn't play nice with TERM=screen

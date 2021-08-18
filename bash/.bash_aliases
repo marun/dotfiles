@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias attach='screen -d -R maru-dev'
+alias attach='screen -d -R new'
 
 alias attach-me='screen -d -R me-dev'
 

@@ -15,6 +15,7 @@
 	username = maru
 [core]
 	excludesfile = ~/.gitignore
+	pager = less
 [push]
 	default = current
 [filter "media"]

@@ -6,6 +6,7 @@ set -o pipefail
 
 SRC_DIR="$(dirname "${BASH_SOURCE}")"
 
+stow -D --dir="${SRC_DIR}" --target="${HOME}" aliases
 stow -D --dir="${SRC_DIR}" --target="${HOME}" git
 stow -D --dir="${SRC_DIR}" --target="${HOME}" screen
 stow -D --dir="${SRC_DIR}" --target="${HOME}" vim

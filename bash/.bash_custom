@@ -9,6 +9,9 @@
 # Aliases
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 
+# Speed over correctness for dev and test
+export UNSAFE_E2E_HACK_DISABLE_ETCD_FSYNC=true
+
 # Retain bash history
 HISTFILESIZE=400000000
 HISTSIZE=10000

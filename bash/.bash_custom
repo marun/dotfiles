@@ -9,6 +9,9 @@
 # Aliases
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 
+# Add personal binfiles to the path
+export PATH=$HOME/src/binfiles:$PATH
+
 # Retain bash history
 HISTFILESIZE=400000000
 HISTSIZE=10000
@@ -71,7 +74,7 @@ export PATH=~/.cask/bin:$PATH
 # Ensure non-packaged golang trumps go installed from packages
 export PATH=/usr/local/go/bin:$PATH
 
-eval $(~/bin/gimme 1.19.4 | grep -v 'go version')
+eval $(~/src/binfiles/gimme 1.19.4 | grep -v 'go version')
 
 export GOPATH=~/go
 

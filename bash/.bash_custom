@@ -40,9 +40,6 @@ then
   # Ensure local bin path (not set automatically)
   export PATH=$HOME/bin:$PATH
 
-  # Ensure python binaries are in the path
-  export PATH=/Users/maru/Library/Python/3.7/bin:$PATH
-
 # Linux
 else
   . /usr/share/git-core/contrib/completion/git-prompt.sh
@@ -59,9 +56,6 @@ else
     export TZ="$(readlink /etc/localtime | sed -e 's,.*/zoneinfo/,,')"
   fi
   PS1_PREFIX='${debian_chroot:+($debian_chroot)}'
-
-  # Ensure python binaries are in the path
-  export PATH=~/.local/bin:$PATH
 
   if which keychain &> /dev/null;
   then

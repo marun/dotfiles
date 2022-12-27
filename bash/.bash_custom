@@ -88,10 +88,6 @@ if [ -f /.dockerenv ]; then
   fi
 fi
 
-if [[ -f "~/.bash_aliases" ]]; then
-  . "~/.bash_aliases"
-fi
-
 function copr() {
   local pr=${1:-}
   local branch=${2:-}

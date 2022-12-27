@@ -123,9 +123,6 @@ if [[ $TERMCAP =~ screen ]]; then
   export TERM=xterm-256color
 fi
 
-# Ensure emacs uses plist instead of hash-table
-export LSP_USE_PLISTS=true
-
 if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"
 fi

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Show all history
+alias history='fc -l 1'
+
 alias attach='screen -d -R new'
 
 alias attach-me='screen -d -R me-dev'

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+# -*- mode: sh -*-
 
 #
 # To enable, add to .bashrc:
@@ -9,25 +9,12 @@
 # Aliases
 if [ -f ~/.aliases ]; then . ~/.aliases; fi
 
-# Retain bash history
-HISTFILESIZE=400000000
-HISTSIZE=10000
-PROMPT_COMMAND="history -a"
-shopt -s histappend
-
-# Git
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-
 # Color the prompt differently for a mac, linux host, vm, or docker
 # container.
 
 # Mac
 if which sw_vers &> /dev/null;
 then
-  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
-
   PS1_COLOR='36' # Cyan
   PS1_PREFIX=
 
@@ -42,8 +29,6 @@ then
 
 # Linux
 else
-  . /usr/share/git-core/contrib/completion/git-prompt.sh
-
   USER_ID="$(whoami)"
   # VM / Container
   if [[ "${USER_ID}" == "vagrant" || "${USER_ID}" == "dev" ]]; then
@@ -77,7 +62,7 @@ export PATH=~/.cask/bin:$PATH
 # Ensure non-packaged golang trumps go installed from packages
 export PATH=/usr/local/go/bin:$PATH
 
-eval $(~/bin/gimme 1.17 | grep -v 'go version')
+eval $(~/bin/gimme 1.17.8 | grep -v 'go version')
 
 export GOPATH=~/go
 

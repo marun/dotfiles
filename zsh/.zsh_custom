@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# -*- mode: sh -*-
+
+#
+# To enable, add to .zshrc:
+#
+#   if [ -f ~/.zsh_custom ]; then . ~/.zsh_custom; fi
+#
+
+if [ -f ~/.aliases ]; then . ~/.aliases; fi
+
+# Mac
+if which sw_vers &> /dev/null;
+   # Disable kcp's usage of fsync to speed up testing on macos
+   export UNSAFE_E2E_HACK_DISABLE_ETCD_FSYNC=1
+then
+  # Ensure local bin path (not set automatically)
+  export PATH=$HOME/bin:$PATH
+fi
+
+# Ensure emacs uses plist instead of hash-table
+export LSP_USE_PLISTS=true
+
+# Ensure cask binaries are in the path
+export PATH=~/.cask/bin:$PATH
+
+# Ensure non-packaged golang trumps go installed from packages
+export PATH=/usr/local/go/bin:$PATH
+
+# Ensure bsc bin is in the path
+export PATH=$HOME/tools/bsc/bin:$PATH
+
+eval $(~/bin/gimme 1.18.1 | grep -v 'go version')
+
+export GOPATH=~/go
+
+export KUBECONFIG=~/.kube/default-kubeconfig
+
+# Ensure go binaries are in the path
+export PATH=$GOPATH/bin:$PATH
+
+bindkey -e
+bindkey '[f' forward-word
+bindkey '[b' backward-word
+
+autoload -Uz select-word-style
+select-word-style bash
+
+# the detailed meaning of the below three variable can be found in `man zshparam`.
+export HISTFILE=~/.histfile
+export HISTSIZE=1000000   # the number of items for the internal history list
+export SAVEHIST=1000000   # maximum number of items for the history file
+
+# The meaning of these options can be found in man page of `zshoptions`.
+setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
+setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
+setopt EXTENDED_HISTORY  # record command start time

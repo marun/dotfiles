@@ -64,6 +64,12 @@ else
   then
     eval `keychain --eval --agents ssh id_rsa`
   fi
+
+  if [[ $TERMCAP =~ screen ]]; then
+    # Emacs doesn't play nice with TERM=screen
+    export TERM=xterm-256color
+  fi
+
 fi
 
 # Compose prompt
@@ -110,11 +116,6 @@ function copr() {
 }
 
 export XAUTHORITY=~/.Xauthority
-
-if [[ $TERMCAP =~ screen ]]; then
-  # Emacs doesn't play nice with TERM=screen
-  export TERM=xterm-256color
-fi
 
 if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"

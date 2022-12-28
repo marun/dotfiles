@@ -40,6 +40,9 @@ then
   # Ensure local bin path (not set automatically)
   export PATH=$HOME/bin:$PATH
 
+  # Ensure homebrew binaries take precedence
+  export PATH="/opt/homebrew/bin:$PATH"
+
 # Linux
 else
   . /usr/share/git-core/contrib/completion/git-prompt.sh

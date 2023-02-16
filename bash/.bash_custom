@@ -41,7 +41,7 @@ then
   export PATH=$HOME/bin:$PATH
 
   # Ensure homebrew binaries take precedence
-  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # Linux
 else
